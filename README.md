@@ -82,14 +82,14 @@ O projeto inicia via <code>node server.js</code>, configurando o Express, CORS e
 <h2>🧠 Estratégia de Tradução</h2>
 
 <p>
-O projeto usa um <strong>dicionário fixo</strong> para converter expressões NL ↔ CPC.
+A estratégia usada para a tradução foi a criação de um <strong>dicionário fixo,</strong> que permite a substituição literal da Linguagem Natural para o CPC ou vice-versa (NL ↔ CPC).
 </p>
 
 <h3>🔁 Regras Básicas</h3>
 <ul>
-  <li><strong>"e"</strong> → <code>^</code></li>
-  <li><strong>"ou"</strong> → <code>v</code></li>
-  <li><strong>"se ... então"</strong> → <code>-&gt;</code></li>
+  <li>Se aparece um "e", troca pelo símbolo ^</li>
+  <li>Se aparece um "ou", vira v</li>
+  <li>Se tem um "se... então", vira uma seta -> (representando a implicação).></li>
 </ul>
 
 <hr>
@@ -120,14 +120,20 @@ Traduza: Se Rafael é filósofo e João é médico, então Lucas é doutor.
 
 <hr>
 
-<h2>⚠️ Limitações</h2>
+<h2>⚠️ Limitações e Possibilidades de Melhoria </h2>
 <p>
-A estratégia baseada em dicionário fixa limita o dinamismo e obriga o usuário a escrever frases em formatos específicos.
+Como dito anteriormente, a estratégia utilizou um dicionário fixo, o que acaba limitando o dinamismo da aplicação. Ou seja, o sistema ficou restrito a estruturas de frases específicas ('composições perfeitas'), exigindo que o usuário siga um padrão exato para obter sucesso na tradução entre Linguagem Natural e CPC.
 </p>
 
 <hr>
 
 <h2>🚀 Possibilidades de Melhoria</h2>
+<p>
+  Para evoluir o projeto, sugere-se a implementação de campos dinâmicos ou o aumento do limite de inputs para proposições. Isso permitiria escalar a complexidade dos argumentos processados, aceitando fórmulas com mais variáveis do que o limite atual.
+</p>
+<p>
+  Ou seja:
+</p>
 <ul>
   <li>Adicionar <strong>campos dinâmicos</strong> para mais proposições</li>
   <li>Permitir fórmulas mais complexas</li>
@@ -144,6 +150,7 @@ A estratégia baseada em dicionário fixa limita o dinamismo e obriga o usuário
 
 <p>🌐 <strong>Site para Teste:</strong><br>
 <i>Acessar Aplicação</i>
+<a href="https://chat-alpha-three-59.vercel.app">[https://www.youtube.com/watch?v=h6z3tSNHMu0](https://chat-alpha-three-59.vercel.app)</a>
 </p>
 
 <p>💻 <strong>Frontend:</strong><br>
