@@ -155,6 +155,7 @@ Como dito anteriormente, a estratégia utilizou um dicionário fixo, o que acaba
 
 <p>💻 <strong>Frontend:</strong><br>
 <i>GitHub - FrontEnd</i>
+<a href="https://github.com/marixccs/AGENTE-IA">https://github.com/marixccs/AGENTE-IA</a>
 </p>
 
 <p>⚙️ <strong>Backend:</strong><br>
