@@ -160,4 +160,5 @@ Como dito anteriormente, a estratégia utilizou um dicionário fixo, o que acaba
 
 <p>⚙️ <strong>Backend:</strong><br>
 <i>GitHub - BackendChat</i>
+<a> href="https://github.com/marixccs/AGENTE-IA/tree/BackendChat">https://github.com/marixccs/AGENTE-IA/tree/BackendChat</a>
 </p>
