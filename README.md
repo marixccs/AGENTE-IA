@@ -150,7 +150,7 @@ Como dito anteriormente, a estratégia utilizou um dicionário fixo, o que acaba
 
 <p>🌐 <strong>Site para Teste:</strong><br>
 <i>Acessar Aplicação</i>
-<a href="https://chat-alpha-three-59.vercel.app">[https://www.youtube.com/watch?v=h6z3tSNHMu0](https://chat-alpha-three-59.vercel.app)</a>
+<a href="https://chat-alpha-three-59.vercel.app">https://chat-alpha-three-59.vercel.app</a>
 </p>
 
 <p>💻 <strong>Frontend:</strong><br>
