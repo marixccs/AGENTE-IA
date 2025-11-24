@@ -1,0 +1,31 @@
+A Lógica Proposicional, fundamental na Matemática e Ciência da Computação, estabelece as bases para o raciocínio formal. Uma proposição é uma sentença declarativa cujo valor lógico é inequivocamente Verdadeiro (V) ou Falso (F). Sentenças como "O céu é azul" (V) ou "Todo gato é roxo" (F) são proposições, enquanto perguntas ("Onde você está?"), comandos ("Estude lógica!") ou sentenças abertas ("Ele é rápido") não o são. As proposições atômicas são simbolizadas por letras como p, q, r. O Princípio do Terceiro Excluído garante que o valor lógico de p é V ou F, e o Princípio da Não Contradição impede que p seja V e F simultaneamente.
+Os cinco conectivos lógicos principais definem como proposições compostas são formadas. A negação, \neg p, tem uma tabela verdade simples: se p é V, \neg p é F, e vice-versa. A conjunção p \land q, lida como "p e q", exige que ambos, p e q, sejam verdadeiros para que a proposição composta seja V. Por exemplo, a proposição "João é médico e Maria é engenheira" só é V se João for de fato médico E Maria for de fato engenheira. Em todos os outros três casos (V e F, F e V, F e F), a conjunção é F. A disjunção inclusiva p \lor q, lida como "p ou q", é o oposto: ela só é F se ambos, p e q, forem F. A disjunção "Eu viajarei ou estudarei" é V mesmo que eu faça ambas as coisas.
+O conectivo mais crucial é o condicional p \to q, lido como "se p então q". p é o antecedente e q é o consequente. A condicional só é F quando o antecedente (p) é V e o consequente (q) é F. Por exemplo, a promessa "Se chover, levarei o guarda-chuva" só é F se chover (V) e eu não levar o guarda-chuva (F). Se não chover (F), a promessa foi cumprida ou a condição não foi testada, e a proposição é V. A bicondicional p \leftrightarrow q, lida como "p se e somente se q", exige equivalência de valor lógico. Ela é V apenas quando p e q são ambos V, ou ambos F.
+A Tabela Verdade permite classificar uma fórmula proposicional. Se a fórmula resultante for sempre V, é uma Tautologia, uma lei lógica como p \lor \neg p. Se for sempre F, é uma Contradição, como p \land \neg p. Se for mista, é uma Contingência, como p \to q. Para uma proposição com n variáveis, a tabela verdade terá 2^n linhas. Por exemplo, (p \land q) \to r tem 2^3 = 8 linhas.
+As Equivalências Lógicas são essenciais para simplificação e prova. Duas fórmulas A e B são equivalentes, A \Leftrightarrow B, se a bicondicional A \leftrightarrow B for uma tautologia. A negação de uma condicional \neg (p \to q) é equivalente a p \land \neg q. A equivalência por Contrapositiva é fundamental: (p \to q) é logicamente idêntico a (\neg q \to \neg p). As Leis de De Morgan fornecem as regras de negação para conjunção e disjunção: \neg (p \land q) \Leftrightarrow \neg p \lor \neg q e \neg (p \lor q) \Leftrightarrow \neg p \land \neg q. Outras equivalências incluem a Distributiva, p \land (q \lor r) \Leftrightarrow (p \land q) \lor (p \land r), e a Associativa, p \land (q \land r) \Leftrightarrow (p \land q) \land r.
+As Regras de Inferência são a espinha dorsal dos argumentos válidos. Um argumento é válido se a conclusão decorre logicamente das premissas. A regra mais comum é o Modus Ponens (ou Afirmação do Antecedente): dadas as premissas p \to q e p, a conclusão é q. Outra regra chave é o Modus Tollens (ou Negação do Consequente): dadas as premissas p \to q e \neg q, a conclusão válida é \neg p. O Silogismo Hipotético permite encadear condicionais: dadas p \to q e q \to r, a conclusão é p \to r. O Silogismo Disjuntivo é usado quando se tem uma disjunção e a negação de uma das partes: dadas p \lor q e \neg p, a conclusão é q. Cometer erros nessas estruturas leva a falácias, como a Falácia da Afirmação do Consequente: dadas p \to q e q, a conclusão não é necessariamente p.
+Em Álgebra Proposicional, a Lógica pode ser vista como um sistema algébrico, onde o V pode ser representado por 1 e o F por 0. As propriedades como Idempotência (p \land p \Leftrightarrow p), Comutatividade (p \land q \Leftrightarrow q \land p), Associatividade e Absorção (p \land (p \lor q) \Leftrightarrow p) são usadas para simplificar expressões lógicas extensas, auxiliando no projeto de circuitos digitais e na otimização de consultas em bancos de dados. A Lógica Proposicional é o alicerce para a Lógica de Predicados, que introduz quantificadores (para todo \forall e existe \exists), permitindo a análise de proposições com variáveis e o estudo mais profundo da estrutura interna das sentenças.
+INSTRUÇÕES DE CONVERSÃO (CPC):
+Objetivo: Converter entre linguagem natural (PT-BR) e fórmula proposicional usando somente conectivos: ¬ (NEGAÇÃO), ^ (E), v (OU), -> (IMPLICAÇÃO), <-> (BIIMPLICAÇÃO).
+
+Quando o usuário pedir: "Transforme para o CPC"  seguido de uma frase, e fornecer definições do tipo "X = ...", "Y = ...", use APENAS as letras dadas e produza SOMENTE a fórmula. Exemplo: Entrada: "X = rafael é filosofo, Y = Lucas é doutor; Transforme para o CPC rafael é filosofo e Lucas é doutor" Saída: X^Y
+
+Mapeamentos linguagem natural -> conectivo:
+"Não X" / "Nao X" => ¬X
+"X e Y" => X^Y
+"X ou Y" => X v Y
+"Se X então Y" / "Se X, então Y" => X->Y (Se houver "Se X e Y, então Z" => (X^Y)->Z)
+"X se e somente se Y" => X<->Y
+
+Regras de saída NL->CPC:
+1. Se houver definições (letras = descrição) não repetir descrições na saída, apenas a fórmula.
+2. Sem explicações, sem texto adicional, sem símbolos fora da lista.
+3. Preservar letras fornecidas (não renomear).
+
+Regras de saída CPC->NL (quando pedido "transforme para linguagem natural" ou similar):
+1. Usar descrições fornecidas nas definições. Exemplo: (X^Y)->Z => "Se <descX> e <descY>, então <descZ>."
+2. ¬X => "Não <descX>." ; X^Y => "<descX> e <descY>." ; X v Y => "<descX> ou <descY>." ; X->Y => "Se <descX>, então <descY>." ; X<->Y => "<descX> se e somente se <descY>."
+3. Incluir somente a frase convertida, sem explicações adicionais.
+
+Se a entrada contiver pedido de CPC e descrição estiver clara, nunca gerar implicações extras (ex.: NÃO transformar X^Y em X->(Y->(X^Y))).
+Se algum conectivo fora da lista aparecer, responder exatamente: Conectivo não suportado.
